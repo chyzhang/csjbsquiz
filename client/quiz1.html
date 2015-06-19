@@ -1,0 +1,54 @@
+<template name="quiz1">
+<h1>This is for the quiz1!!!!</h1>
+    
+<hr/>
+ <div class = row1>
+     
+    <div class=" col-md-5 col-md-10">
+
+<h2>Enter your information!</h2>
+    <form id="createPerson">
+        Name of the Product: <input type="text" name="nameOfTheProduct" value="{{nameOfTheProduct}}"><br/>
+        First Name: <input type="text" name="firstName" value="{{firstName}}"><br/>
+        Last Name: <input type="text" name="lastName" value="{{lastName}}"><br/>
+        URL for the deployed project: <input type="text" name="URLForProject" value="{{URLForProject}}"><br/>
+        the URL of their  github repository: <input type="text" name="URLForGit" value="{{URLForGit}}"><br/>
+        <input type="submit">
+    </form>
+        </div>
+<div class="col-md-5  col-md-offset-1 col-md-12">  
+<table class="table col-md-6">
+	<thead>
+		<tr>
+            <th>delete</th>
+            <th>Name of the Product</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th> URL for the deployed project</th>
+            <th>the URL of their  github repository</th>
+
+        </tr>
+	</thead>
+	<tbody>
+		{{#each personInfo}}
+			{{> ipersonInfo}}
+		{{/each}}
+	</tbody>
+</table>
+        </div>
+
+ </div>   
+</template>
+<template name="ipersonInfo">
+	<tr>
+        <td>
+			<span class="glyphicon glyphicon-remove jbsapp-delete-icon" aria-hidden="true"></span>
+		</td>
+		<td>{{nameOfTheProduct}}</td>
+        <td>{{firstName}}</td>
+		<td>{{lastName}}</td>
+        <td><a href={{URLForProject}}>{{URLForProject}}</a></td>
+        <td><a href={{URLForGit}}>{{URLForGit}}</a></td>
+
+	</tr>
+</template>
