@@ -1,0 +1,18 @@
+<template name="quiz2">
+    <h1>Meteor Draw</h1>
+		<div id="container">
+            <p>Color picker: <select id="selectColor">
+                  <option id="colBlack" value="black" selected="selected">Black</option>
+                  <option id="colRed" value="red">Red</option>
+                  <option id="colBlue" value="blue">Blue</option>
+                  <option id="colGreen" value="green">Green</option>
+                  <option id="colOrange" value="orange">Orange</option>
+                  <option id="colYellow" value="yellow">Yellow</option>
+</select>
+</p>
+            <button id="clear">Clear</button>
+            <li class="text-info" id="position">Position: (0,0)</li>
+            <canvas id="gameboard" width="500" height="450" style="border:2px solid red;"></canvas>
+		</div>
+    
+</template>
